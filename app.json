@@ -10,22 +10,22 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#07070c"
+      "backgroundColor": "#060610"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.zzenith.app",
+      "bundleIdentifier": "com.zenith.app",
       "infoPlist": {
         "NSCameraUsageDescription": "Profil fotoğrafı eklemek için kamera kullanımı",
         "NSPhotoLibraryUsageDescription": "Profil fotoğrafı eklemek için galeri erişimi"
       }
     },
     "android": {
-      "package": "com.zzenith.app",
+      "package": "com.zenith.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#07070c"
+        "backgroundColor": "#060610"
       },
       "permissions": ["NOTIFICATIONS", "CAMERA", "READ_EXTERNAL_STORAGE"]
     },
@@ -34,22 +34,7 @@
     },
     "plugins": [
       "expo-router",
-      "expo-font",
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/icon.png",
-          "color": "#9d4edd"
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
-    },
-    "extra": {
-      "eas": {
-        "projectId": "your-eas-project-id"
-      }
-    }
+      "expo-font"
+    ]
   }
 }
