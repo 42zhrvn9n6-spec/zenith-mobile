@@ -8,7 +8,9 @@ export default function RootLayout() {
       <StatusBar style="light" />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" />
-        <Stack.Screen name="(auth)" />
+        <Stack.Screen name="(auth)/onboarding" />
+        <Stack.Screen name="(auth)/cosmic-id" />
+        <Stack.Screen name="(auth)/jung-test" />
         <Stack.Screen name="(tabs)" />
       </Stack>
     </View>
