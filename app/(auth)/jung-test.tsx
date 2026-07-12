@@ -1,7 +1,8 @@
 import { View, Text, TouchableOpacity, ScrollView, Alert, Dimensions } from 'react-native';
 import { useState } from 'react';
 import { router } from 'expo-router';
-import import { useAstroStore } from '../../src/store/astroStore';
+import { useAstroStore } from '../../src/stores/astroStore';
+
 
 import { COLORS } from '../../src/constants/colors';
 import Svg, { Circle, Line, Text as SvgText, G, Polygon } from 'react-native-svg';
