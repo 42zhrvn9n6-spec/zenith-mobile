@@ -1,17 +1,50 @@
-"android": {
-  "package": "com.zenith.app",
-  "adaptiveIcon": {
-    "foregroundImage": "./assets/adaptive-icon.png",
-    "backgroundColor": "#060610"
-  },
-  "permissions": [
-    "NOTIFICATIONS",
-    "CAMERA",
-    "READ_EXTERNAL_STORAGE"
-  ]
-},
-"plugins": [
-  "expo-router",
-  "expo-font"
-],
-
+{
+  "expo": {
+    "owner": "ukiyoxccs-team",
+    "name": "Z Zenith",
+    "slug": "zenith-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "zenith",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#060610"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.zenith.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Profil fotoğrafı eklemek için kamera kullanımı",
+        "NSPhotoLibraryUsageDescription": "Profil fotoğrafı eklemek için galeri erişimi"
+      }
+    },
+    "android": {
+      "package": "com.zenith.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#060610"
+      },
+      "permissions": [
+        "NOTIFICATIONS",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3f313297-9f78-4b44-8e3b-5e3bbf19616f"
+      },
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}
