@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner": "ukiyoxccs-team",
     "name": "Z Zenith",
     "slug": "zenith-mobile",
     "version": "1.0.0",
@@ -27,7 +28,11 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#060610"
       },
-      "permissions": ["NOTIFICATIONS", "CAMERA", "READ_EXTERNAL_STORAGE"]
+      "permissions": [
+        "NOTIFICATIONS",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
