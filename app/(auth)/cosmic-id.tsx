@@ -17,7 +17,8 @@ import { COLORS } from '../../src/constants/colors';
 import { getZodiacByDate } from '../../src/constants/zodiac';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { z } from 'zod';
-import { RoxyAPI } from '@roxyapi/sdk';
+import { searchCities } from '../../src/constants/cities';
+
 
 // Zod doğrulama şeması (şehir ve koordinatlar eklendi)
 const birthSchema = z.object({
@@ -65,7 +66,8 @@ export default function CosmicIdScreen() {
     }
 
     // RoxyAPI ile şehir ara (offline)
-    const results = RoxyAPI.searchCities(text, { limit: 5 });
+    const results = searchCities(text, { limit: 5 });
+
     setSuggestions(results);
     setShowSuggestions(true);
   };
