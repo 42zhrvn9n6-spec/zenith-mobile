@@ -1,7 +1,7 @@
 import { View, Text, ActivityIndicator, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
 import { useEffect, useState } from 'react';
 import { router } from 'expo-router';
-import { useAstroStore } from '../../src/store/astroStore';
+import { useAstroStore } from '../../src/stores/astroStore';
 import { usePaymentService } from '../../src/services/payment';
 import { COLORS } from '../../src/constants/colors';
 
