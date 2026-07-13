@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { useState } from 'react';
 import { router } from 'expo-router';
-import { useAuthStore } from '../../src/store/authStore';
+import { useAuthStore } from '../../src/stores/authStore';
 import { COLORS } from '../../src/constants/colors';
 import { getZodiacByDate } from '../../src/constants/zodiac';
 import DateTimePicker from '@react-native-community/datetimepicker';
