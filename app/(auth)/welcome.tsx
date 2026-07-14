@@ -1,28 +1,18 @@
-import { View, Text, TouchableOpacity } from 'react-native';
-import { router } from 'expo-router';
-import { useAuthStore } from '../../src/stores/authStore';
+import { Stack } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { View } from 'react-native';
 
-export default function Welcome() {
-  const { setGuest } = useAuthStore();
-  
+export default function RootLayout() {
   return (
-    <View style={{ flex: 1, backgroundColor: '#060610', padding: 24, justifyContent: 'center' }}>
-      <Text style={{ color: '#C9A84C', fontSize: 36, textAlign: 'center', marginBottom: 20 }}>Z Zenith</Text>
-      <Text style={{ color: '#CCC8B4', fontSize: 16, textAlign: 'center', marginBottom: 48 }}>Kozmik yolculuğuna başla</Text>
-      
-      <TouchableOpacity 
-        style={{ backgroundColor: '#C9A84C', padding: 16, borderRadius: 12, marginBottom: 12 }}
-        onPress={() => router.push('/(auth)/cosmic-id')}
-      >
-        <Text style={{ color: '#000', textAlign: 'center', fontWeight: 'bold' }}>Kozmik Kimliğimi Oluştur</Text>
-      </TouchableOpacity>
-      
-      <TouchableOpacity 
-        style={{ borderWidth: 1, borderColor: '#8B6914', padding: 16, borderRadius: 12 }}
-        onPress={() => { setGuest(); router.push('/(tabs)'); }}
-      >
-        <Text style={{ color: '#CCC8B4', textAlign: 'center' }}>Misafir Olarak Devam Et</Text>
-      </TouchableOpacity>
+    <View style={{ flex: 1, backgroundColor: '#060610' }}>
+      <StatusBar style="light" />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(auth)/welcome" />
+        <Stack.Screen name="(auth)/cosmic-id" />
+        <Stack.Screen name="(auth)/jung-test" />
+        <Stack.Screen name="(tabs)" />
+      </Stack>
     </View>
   );
 }
